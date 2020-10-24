@@ -10,7 +10,6 @@ namespace Proc
     {
         static void Main(string[] args)
         {
-            
             Console.ReadKey();
         }
         //Proc16
@@ -29,9 +28,28 @@ namespace Proc
         static double TriangleP(double a, double h)
         => Side(a, h) * 2 + a;
         //Proc21
+        static int SumRange(int start,int end)
+        {
+            int sum = 0;
 
-        //help 
-        static double Side(double a, double h) 
+            if (start > end)
+                return 0;
+
+            for (; start < end; start++)
+                sum += start;
+
+            return sum;
+        }
+        //Proc22
+        static double Calc(double a, double b, double o)
+        => o == 1 ? a - b : (o == 2 ? a * b : (a == 3 ? a/b :a+b));
+        //Proc23
+        static int Quarter(double x, double y)
+            => y > 0 ? (x > 0  ? 1 : 2) : (x > 0 ? 4 : 3);
+        //Proc24
+
+    //help        
+    static double Side(double a, double h) 
             => Pow(a / 2, 2) + Pow(h, 2);
         static double Pow(double num,int koren)
             =>Math.Pow(num, koren);
