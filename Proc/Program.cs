@@ -6,31 +6,29 @@ using System.Threading.Tasks;
 
 namespace Proc
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(IsPower5(125));
-            Console.WriteLine(IsPower5(120));
             Console.ReadKey();
         }
         //Proc16
-        static int Sign(int X)
+        public int Sign(int X)
             => X > 0 ? 1 :(X < 0 ? -1 : 0);
         //Proc17
-        static int RootsCount(int A, int B, int C)
+        public int RootsCount(int A, int B, int C)
             => Pow(B, 2) - 4 * A * C > 0 ? 2 : (Pow(B, 2) - 4 * A * C < 0 ? 0 : 1);
         //Proc18
-        static double CircleS(double R)
+        public double CircleS(double R)
             => Math.PI * Pow(R,2);
         //Proc19
-        static double RingS(double R1, double R2)
+        public double RingS(double R1, double R2)
             => Math.PI * Pow(R1, 2) - Math.PI * Pow(R2, 2);
         //Proc20 
-        static double TriangleP(double a, double h)
+        public double TriangleP(double a, double h)
         => Side(a, h) * 2 + a;
         //Proc21
-        static int SumRange(int start,int end)
+        public int SumRange(int start,int end)
         {
             int sum = 0;
 
@@ -43,24 +41,24 @@ namespace Proc
             return sum;
         }
         //Proc22
-        static double Calc(double a, double b, double o)
+        public double Calc(double a, double b, double o)
         => o == 1 ? a - b : (o == 2 ? a * b : (a == 3 ? a/b :a+b));
         //Proc23
-        static int Quarter(double x, double y)
+        public int Quarter(double x, double y)
             => y > 0 ? (x > 0  ? 1 : 2) : (x > 0 ? 4 : 3);
         //Proc24
-        static bool Even(int k)
+        public bool Even(int k)
         => k%2==0 ? false : true;
         //Proc25
-        static bool IsSquare(int k)
+        public bool IsSquare(int k)
             => Math.Sqrt(k) ==(int)Math.Sqrt(k);
         //Proc26
-        static bool IsPower5(double k)
+        public bool IsPower5(double k)
             => k / 5 == 1  ? true : (k/5 > 1 ? IsPower5(k/5) : false);
-    //help        
-    static double Side(double a, double h) 
+        //help        
+        public static double Side(double a, double h) 
             => Pow(a / 2, 2) + Pow(h, 2);
-        static double Pow(double num,int koren)
+        public static double Pow(double num,int koren)
             =>Math.Pow(num, koren);
 
     }
