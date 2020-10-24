@@ -10,6 +10,8 @@ namespace Proc
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(IsPower5(125));
+            Console.WriteLine(IsPower5(120));
             Console.ReadKey();
         }
         //Proc16
@@ -47,7 +49,14 @@ namespace Proc
         static int Quarter(double x, double y)
             => y > 0 ? (x > 0  ? 1 : 2) : (x > 0 ? 4 : 3);
         //Proc24
-
+        static bool Even(int k)
+        => k%2==0 ? false : true;
+        //Proc25
+        static bool IsSquare(int k)
+            => Math.Sqrt(k) ==(int)Math.Sqrt(k);
+        //Proc26
+        static bool IsPower5(double k)
+            => k / 5 == 1  ? true : (k/5 > 1 ? IsPower5(k/5) : false);
     //help        
     static double Side(double a, double h) 
             => Pow(a / 2, 2) + Pow(h, 2);
