@@ -9,6 +9,7 @@ namespace Tests
         public void Setup()
         {
             prog = new Proc.Program();
+            // I know that i don't need this !
         }
 
         [Test]
