@@ -26,29 +26,45 @@ namespace Proc
             => Math.PI * Pow(R1, 2) - Math.PI * Pow(R2, 2);
         //Proc20 
         public double TriangleP(double a, double h)
-        => Side(a, h) * 2 + a;
+            => Side(a, h) * 2 + a;
         //Proc21
         public int SumRange(int start,int end)
         {
-            int sum = 0;
-
             if (start > end)
                 return 0;
 
-            for (; start < end; start++)
+            int sum = 0;
+
+            for (; start <= end; start++)
                 sum += start;
 
             return sum;
         }
         //Proc22
         public double Calc(double a, double b, double o)
-        => o == 1 ? a - b : (o == 2 ? a * b : (a == 3 ? a/b :a+b));
+        {
+            switch (o)
+            {
+                case 1:
+                    return a - b;
+
+                case 2:
+                    return a * b;
+
+                case 3:
+                    return a / b;
+
+                default:
+                    return a + b;
+            }
+
+        }
         //Proc23
         public int Quarter(double x, double y)
             => y > 0 ? (x > 0  ? 1 : 2) : (x > 0 ? 4 : 3);
         //Proc24
         public bool Even(int k)
-        => k%2==0 ? false : true;
+            => k%2==0 ? false : true;
         //Proc25
         public bool IsSquare(int k)
             => Math.Sqrt(k) ==(int)Math.Sqrt(k);
